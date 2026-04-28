@@ -4,10 +4,10 @@ import { ArrowRight, CheckCircle, Shield, Zap, Users, BarChart3, FileText, Eye, 
 /**
  * Design Philosophy: Minimalismo Corporativo Elegante
  * - Paleta: Azul marinho escuro (#0f1f2e) + Dourado quente (#c9a961)
- * - Tipografia: Playfair Display (títulos) + Roboto (corpo)
+ * - Tipografia: Playfair Display (títulos) + Lato (corpo - similar a Calibri)
  * - Layout: Assimétrico com espaçamento generoso
  * - Elementos: Linhas curvas decorativas, fênix, padrão do cartão de visitas
- * - Conteúdo: BPO Financeiro especializado (Marlene Marino)
+ * - Conteúdo: BPO Financeiro especializado (Marlene Marino - MEI)
  */
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <a href="#servicos" className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium">Serviços</a>
-            <a href="#diferenciais" className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium">Diferenciais</a>
+            <a href="#beneficios" className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium">Benefícios</a>
             <a href="#contato" className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium">Contato</a>
             <Button className="bg-[#0f1f2e] text-white hover:bg-[#1a3a52] px-6 py-2 rounded-lg font-medium transition-all">Solicitar Informações</Button>
           </nav>
@@ -178,69 +178,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Diferenciais Section */}
-      <section id="diferenciais" className="section-spacing bg-white">
-        <div className="container">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            {/* Left: Image */}
-            <div className="relative">
-              <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663605499308/EyquiZpZ5Nxf6C7LngVP3e/bpo-financial-services-NyiDd8fvZpmaK53YAzcSks.webp"
-                alt="Serviços Financeiros"
-                className="rounded-lg shadow-lg w-full"
-              />
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#c9a961] rounded-lg opacity-20" />
-            </div>
-
-            {/* Right: Content */}
-            <div>
-              <div className="mb-4">
-                <div className="h-1 w-16 bg-gradient-to-r from-[#c9a961] to-[#0f1f2e]" />
-              </div>
-              <h2 className="font-playfair font-bold text-[#0f1f2e] text-4xl mb-6">Por que nos escolher?</h2>
-              
-              <div className="space-y-6">
-                <div className="flex gap-4">
-                  <CheckCircle size={24} className="text-[#c9a961] flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-[#0f1f2e] mb-2">Expertise Especializada</h3>
-                    <p className="text-gray-600">Experiência comprovada em processos financeiros terceirizados</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <CheckCircle size={24} className="text-[#c9a961] flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-[#0f1f2e] mb-2">Trabalho Remoto</h3>
-                    <p className="text-gray-600">Organização e acompanhamento contínuo das rotinas financeiras</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <CheckCircle size={24} className="text-[#c9a961] flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-[#0f1f2e] mb-2">Atendimento Personalizado</h3>
-                    <p className="text-gray-600">Soluções customizadas para as necessidades específicas do seu negócio</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <CheckCircle size={24} className="text-[#c9a961] flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-[#0f1f2e] mb-2">Clareza nas Informações</h3>
-                    <p className="text-gray-600">Relatórios simples e claros para melhor tomada de decisão</p>
-                  </div>
-                </div>
-              </div>
-
-              <Button className="bg-[#0f1f2e] text-white hover:bg-[#1a3a52] mt-8 px-8 py-3 rounded-lg font-medium transition-all">Solicitar Informações</Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Benefícios Section */}
-      <section className="section-spacing bg-gray-50">
+      <section id="beneficios" className="section-spacing bg-gray-50">
         <div className="container">
           <div className="text-center mb-16">
             <div className="flex justify-center mb-4">
@@ -385,8 +324,16 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0f1f2e] text-white py-12">
-        <div className="container">
+      <footer className="bg-[#0f1f2e] text-white py-12 relative">
+        {/* Fênix icon at the bottom */}
+        <div className="absolute bottom-0 right-0 opacity-10 pointer-events-none">
+          <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 20C100 20 140 60 140 100C140 130 120 150 100 150C80 150 60 130 60 100C60 60 100 20 100 20Z" fill="#c9a961" />
+            <path d="M80 140C70 150 60 160 50 170M120 140C130 150 140 160 150 170" stroke="#c9a961" strokeWidth="3" />
+          </svg>
+        </div>
+
+        <div className="container relative z-10">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="font-playfair font-bold text-lg mb-4 text-[#c9a961]">Marlene Marino</h3>
@@ -410,7 +357,7 @@ export default function Home() {
             </div>
             <div>
               <h4 className="font-semibold mb-4 text-[#c9a961]">Contato</h4>
-              <p className="text-gray-300 text-sm mb-2">📞 +55 11 98441-1236</p>
+              <p className="text-gray-300 text-sm mb-2">📞 +55 11 99999-9999</p>
               <p className="text-gray-300 text-sm mb-2">📧 marlene.marino@outlook.com</p>
               <p className="text-gray-300 text-sm">🔗 <a href="https://linkedin.com/in/marlene-marino28" target="_blank" rel="noopener noreferrer" className="hover:text-[#c9a961] transition-colors">LinkedIn</a></p>
             </div>
