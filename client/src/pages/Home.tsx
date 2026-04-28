@@ -32,7 +32,7 @@ export default function Home() {
       {/* Hero Section with Curved Design */}
       <section className="relative overflow-hidden pt-20 pb-32 md:pt-32 md:pb-48 bg-white">
         {/* Fênix no início - lado esquerdo */}
-        <div className="absolute top-20 left-0 opacity-30 pointer-events-none">
+        <div className="absolute top-32 left-8 opacity-50 pointer-events-none">
           <svg width="200" height="200" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="50" cy="60" r="18" fill="#c9a961" />
             <circle cx="50" cy="32" r="11" fill="#c9a961" />
@@ -66,7 +66,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent z-1" />
 
         {/* Fênix no final do hero - lado direito */}
-        <div className="absolute bottom-10 right-0 opacity-25 pointer-events-none">
+        <div className="absolute bottom-10 right-8 opacity-50 pointer-events-none">
           <svg width="250" height="250" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="50" cy="60" r="18" fill="#c9a961" />
             <circle cx="50" cy="32" r="11" fill="#c9a961" />
@@ -206,7 +206,7 @@ export default function Home() {
       {/* Benéficios Section */}
       <section className="section-spacing bg-gradient-to-b from-white to-gray-50 relative">
         {/* Fênix no centro */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-20 pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-40 pointer-events-none">
           <svg width="300" height="300" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="50" cy="60" r="18" fill="#c9a961" />
             <circle cx="50" cy="32" r="11" fill="#c9a961" />
