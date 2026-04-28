@@ -25,11 +25,7 @@ export default function Home() {
             <button onClick={() => setLocation('/contato')} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer">Contato</button>
             <Button onClick={() => setLocation('/contato')} className="bg-[#0f1f2e] text-white hover:bg-[#1a3a52] px-6 py-2 rounded-lg font-medium transition-all">Solicitar Informações</Button>
           </nav>
-          <div className="flex items-center gap-4">
-            <div title="Configurações">
-              <Settings size={20} className="text-[#0f1f2e] cursor-pointer hover:text-[#c9a961] transition-colors" />
-            </div>
-          </div>
+          <div className="w-20" />
         </div>
       </header>
 
