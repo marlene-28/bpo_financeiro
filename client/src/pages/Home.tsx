@@ -1,5 +1,6 @@
+import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Shield, Zap, Users, BarChart3, FileText, Eye, Shuffle, Settings } from "lucide-react";
+import { ArrowRight, CheckCircle, Shield, Zap, Users, BarChart3, FileText, Eye, Shuffle, Settings, Menu, X } from "lucide-react";
 import { useLocation } from "wouter";
 
 /**
@@ -13,20 +14,39 @@ import { useLocation } from "wouter";
 
 export default function Home() {
   const [, setLocation] = useLocation();
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   return (
     <div className="min-h-screen bg-white">
       {/* Header/Navigation */}
       <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
         <div className="container flex items-center justify-between h-20">
           <h1 className="font-playfair font-bold text-[#0f1f2e] text-xl">Marlene Marino</h1>
+          
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <button onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer">Serviços</button>
             <button onClick={() => document.getElementById('beneficios')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer">Benéficios</button>
             <button onClick={() => setLocation('/contato')} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer">Contato</button>
             <Button onClick={() => setLocation('/contato')} className="bg-[#0f1f2e] text-white hover:bg-[#1a3a52] px-6 py-2 rounded-lg font-medium transition-all">Solicitar Informações</Button>
           </nav>
-          <div className="w-20" />
+          
+          {/* Mobile Menu Button */}
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden">
+            {mobileMenuOpen ? <X size={24} className="text-[#0f1f2e]" /> : <Menu size={24} className="text-[#0f1f2e]" />}
+          </button>
+          
+          <div className="hidden md:block w-20" />
         </div>
+        
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <nav className="md:hidden bg-white border-t border-gray-100 p-4 flex flex-col gap-4">
+            <button onClick={() => { document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer text-left">Serviços</button>
+            <button onClick={() => { document.getElementById('beneficios')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer text-left">Benéficios</button>
+            <button onClick={() => { setLocation('/contato'); setMobileMenuOpen(false); }} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer text-left">Contato</button>
+            <Button onClick={() => { setLocation('/contato'); setMobileMenuOpen(false); }} className="bg-[#0f1f2e] text-white hover:bg-[#1a3a52] px-6 py-2 rounded-lg font-medium transition-all w-full">Solicitar Informações</Button>
+          </nav>
+        )}
       </header>
 
       {/* Hero Section with Curved Design */}
