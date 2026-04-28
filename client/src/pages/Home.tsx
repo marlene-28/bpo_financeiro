@@ -15,6 +15,16 @@ import { useLocation } from "wouter";
 export default function Home() {
   const [, setLocation] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  
+  const scrollToSection = (sectionId: string) => {
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  };
+  
   return (
     <div className="min-h-screen bg-white">
       {/* Header/Navigation */}
@@ -24,7 +34,7 @@ export default function Home() {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <button onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer">Serviços</button>
+            <button onClick={() => scrollToSection('servicos')} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer">Serviços</button>
             <button onClick={() => document.getElementById('beneficios')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer">Benéficios</button>
             <button onClick={() => setLocation('/contato')} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer">Contato</button>
             <Button onClick={() => setLocation('/contato')} className="bg-[#0f1f2e] text-white hover:bg-[#1a3a52] px-6 py-2 rounded-lg font-medium transition-all">Solicitar Informações</Button>
@@ -41,7 +51,7 @@ export default function Home() {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <nav className="md:hidden bg-white border-t border-gray-100 p-4 flex flex-col gap-4">
-            <button onClick={() => { document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer text-left">Serviços</button>
+            <button onClick={() => { scrollToSection('servicos'); setMobileMenuOpen(false); }} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer text-left">Serviços</button>
             <button onClick={() => { document.getElementById('beneficios')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer text-left">Benéficios</button>
             <button onClick={() => { setLocation('/contato'); setMobileMenuOpen(false); }} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer text-left">Contato</button>
             <Button onClick={() => { setLocation('/contato'); setMobileMenuOpen(false); }} className="bg-[#0f1f2e] text-white hover:bg-[#1a3a52] px-6 py-2 rounded-lg font-medium transition-all w-full">Solicitar Informações</Button>
