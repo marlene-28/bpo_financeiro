@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Shield, Zap, Users, BarChart3, FileText, Eye, Shuffle } from "lucide-react";
+import { useLocation } from "wouter";
 
 /**
  * Design Philosophy: Minimalismo Corporativo Elegante
@@ -11,6 +12,7 @@ import { ArrowRight, CheckCircle, Shield, Zap, Users, BarChart3, FileText, Eye, 
  */
 
 export default function Home() {
+  const [, setLocation] = useLocation();
   return (
     <div className="min-h-screen bg-white">
       {/* Header/Navigation */}
@@ -66,10 +68,10 @@ export default function Home() {
               Eu ajudo empresas a organizar e otimizar seus processos financeiros através de serviços de BPO Financeiro.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-[#0f1f2e] text-white hover:bg-[#1a3a52] flex items-center gap-2 justify-center px-8 py-3 rounded-lg font-medium transition-all">
+              <Button onClick={() => setLocation("/servicos")} className="bg-[#0f1f2e] text-white hover:bg-[#1a3a52] flex items-center gap-2 justify-center px-8 py-3 rounded-lg font-medium transition-all">
                 Conhecer Serviços <ArrowRight size={20} />
               </Button>
-              <Button variant="outline" className="px-8 py-3 border-[#0f1f2e] text-[#0f1f2e] hover:bg-[#0f1f2e] hover:text-white transition-all rounded-lg font-medium">
+              <Button onClick={() => setLocation("/contato")} variant="outline" className="px-8 py-3 border-[#0f1f2e] text-[#0f1f2e] hover:bg-[#0f1f2e] hover:text-white transition-all rounded-lg font-medium">
                 Solicitar Informações
               </Button>
             </div>
@@ -317,7 +319,7 @@ export default function Home() {
           <p className="text-gray-200 max-w-2xl mx-auto mb-8 text-lg">
             Entre em contato e descubra como posso ajudar sua empresa a otimizar suas rotinas financeiras
           </p>
-          <Button className="bg-[#c9a961] text-[#0f1f2e] hover:bg-opacity-90 px-8 py-3 rounded-lg font-semibold transition-all">
+          <Button onClick={() => setLocation("/contato")} className="bg-[#c9a961] text-[#0f1f2e] hover:bg-opacity-90 px-8 py-3 rounded-lg font-semibold transition-all">
             Solicitar Informações
           </Button>
         </div>
@@ -326,10 +328,16 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-[#0f1f2e] text-white py-12 relative">
         {/* Fênix icon at the bottom */}
-        <div className="absolute bottom-0 right-0 opacity-10 pointer-events-none">
-          <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100 20C100 20 140 60 140 100C140 130 120 150 100 150C80 150 60 130 60 100C60 60 100 20 100 20Z" fill="#c9a961" />
-            <path d="M80 140C70 150 60 160 50 170M120 140C130 150 140 160 150 170" stroke="#c9a961" strokeWidth="3" />
+        <div className="absolute bottom-4 right-8 opacity-40 pointer-events-none">
+          <svg width="140" height="140" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="60" r="18" fill="#c9a961" />
+            <circle cx="50" cy="32" r="11" fill="#c9a961" />
+            <circle cx="54" cy="30" r="2" fill="#0f1f2e" />
+            <path d="M38 55 Q25 48 20 62 Q28 58 38 62Z" fill="#c9a961" />
+            <path d="M62 55 Q75 48 80 62 Q72 58 62 62Z" fill="#c9a961" />
+            <path d="M48 75 Q45 85 42 95" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <path d="M50 76 Q50 88 50 98" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <path d="M52 75 Q55 85 58 95" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
           </svg>
         </div>
 

@@ -5,12 +5,17 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import Servicos from "./pages/Servicos";
+import Contato from "./pages/Contato";
+import WhatsAppWidget from "./components/WhatsAppWidget";
 
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/servicos"} component={Servicos} />
+      <Route path={"/contato"} component={Contato} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
@@ -33,6 +38,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <WhatsAppWidget />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
