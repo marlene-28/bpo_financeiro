@@ -18,24 +18,33 @@ export default function Home() {
       {/* Header/Navigation */}
       <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
         <div className="container flex items-center justify-between h-20">
-          <div className="flex items-center gap-3">
-            <img 
-              src="/manus-storage/marlene-marino-logo_e1cf2bc9.png"
-              alt="Marlene Marino BPO Financeiro"
-              className="h-16 w-auto"
-            />
-          </div>
+          <h1 className="font-playfair font-bold text-[#0f1f2e] text-xl">Marlene Marino</h1>
           <nav className="hidden md:flex items-center gap-8">
             <a href="#servicos" className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium">Serviços</a>
             <a href="#beneficios" className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium">Benefícios</a>
             <a href="#contato" className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium">Contato</a>
             <Button className="bg-[#0f1f2e] text-white hover:bg-[#1a3a52] px-6 py-2 rounded-lg font-medium transition-all">Solicitar Informações</Button>
           </nav>
+          <div className="w-20" />
         </div>
       </header>
 
       {/* Hero Section with Curved Design */}
       <section className="relative overflow-hidden pt-20 pb-32 md:pt-32 md:pb-48 bg-white">
+        {/* Fênix no início - lado esquerdo */}
+        <div className="absolute top-20 left-0 opacity-30 pointer-events-none">
+          <svg width="200" height="200" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="60" r="18" fill="#c9a961" />
+            <circle cx="50" cy="32" r="11" fill="#c9a961" />
+            <circle cx="54" cy="30" r="2" fill="#0f1f2e" />
+            <path d="M38 55 Q25 48 20 62 Q28 58 38 62Z" fill="#c9a961" />
+            <path d="M62 55 Q75 48 80 62 Q72 58 62 62Z" fill="#c9a961" />
+            <path d="M48 75 Q45 85 42 95" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <path d="M50 76 Q50 88 50 98" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <path d="M52 75 Q55 85 58 95" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+          </svg>
+        </div>
+
         {/* Curved top decoration */}
         <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none">
           <svg viewBox="0 0 1200 200" preserveAspectRatio="none" className="w-full h-full">
@@ -55,6 +64,20 @@ export default function Home() {
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent z-1" />
+
+        {/* Fênix no final do hero - lado direito */}
+        <div className="absolute bottom-10 right-0 opacity-25 pointer-events-none">
+          <svg width="250" height="250" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="60" r="18" fill="#c9a961" />
+            <circle cx="50" cy="32" r="11" fill="#c9a961" />
+            <circle cx="54" cy="30" r="2" fill="#0f1f2e" />
+            <path d="M38 55 Q25 48 20 62 Q28 58 38 62Z" fill="#c9a961" />
+            <path d="M62 55 Q75 48 80 62 Q72 58 62 62Z" fill="#c9a961" />
+            <path d="M48 75 Q45 85 42 95" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <path d="M50 76 Q50 88 50 98" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <path d="M52 75 Q55 85 58 95" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+          </svg>
+        </div>
         
         <div className="container relative z-10">
           <div className="max-w-2xl">
@@ -180,14 +203,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Benefícios Section */}
-      <section id="beneficios" className="section-spacing bg-gray-50">
-        <div className="container">
+      {/* Benéficios Section */}
+      <section className="section-spacing bg-gradient-to-b from-white to-gray-50 relative">
+        {/* Fênix no centro */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-20 pointer-events-none">
+          <svg width="300" height="300" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="60" r="18" fill="#c9a961" />
+            <circle cx="50" cy="32" r="11" fill="#c9a961" />
+            <circle cx="54" cy="30" r="2" fill="#0f1f2e" />
+            <path d="M38 55 Q25 48 20 62 Q28 58 38 62Z" fill="#c9a961" />
+            <path d="M62 55 Q75 48 80 62 Q72 58 62 62Z" fill="#c9a961" />
+            <path d="M48 75 Q45 85 42 95" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <path d="M50 76 Q50 88 50 98" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <path d="M52 75 Q55 85 58 95" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+          </svg>
+        </div>
+
+        <div className="container relative z-10">
           <div className="text-center mb-16">
             <div className="flex justify-center mb-4">
               <div className="h-1 w-16 bg-gradient-to-r from-[#c9a961] to-[#0f1f2e]" />
             </div>
-            <h2 className="font-playfair font-bold text-[#0f1f2e] text-4xl mb-4">Benefícios</h2>
+            <h2 className="font-playfair font-bold text-[#0f1f2e] text-4xl mb-4">Benéficios</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Transforme sua gestão financeira com organização, eficiência e clareza
             </p>
@@ -236,8 +273,7 @@ export default function Home() {
                 <div className="text-5xl mb-4">{item.icon}</div>
                 <h3 className="font-semibold mb-2 text-lg">{item.title}</h3>
                 <p className="text-gray-200">{item.desc}</p>
-              </div>
-            ))}
+              </div>            ))}
           </div>
         </div>
       </section>
@@ -327,19 +363,6 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-[#0f1f2e] text-white py-12 relative">
-        {/* Fênix icon at the bottom */}
-        <div className="absolute bottom-4 right-8 opacity-40 pointer-events-none">
-          <svg width="140" height="140" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="60" r="18" fill="#c9a961" />
-            <circle cx="50" cy="32" r="11" fill="#c9a961" />
-            <circle cx="54" cy="30" r="2" fill="#0f1f2e" />
-            <path d="M38 55 Q25 48 20 62 Q28 58 38 62Z" fill="#c9a961" />
-            <path d="M62 55 Q75 48 80 62 Q72 58 62 62Z" fill="#c9a961" />
-            <path d="M48 75 Q45 85 42 95" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-            <path d="M50 76 Q50 88 50 98" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-            <path d="M52 75 Q55 85 58 95" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-          </svg>
-        </div>
 
         <div className="container relative z-10">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
