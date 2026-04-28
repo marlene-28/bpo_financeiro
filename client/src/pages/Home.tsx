@@ -31,19 +31,7 @@ export default function Home() {
 
       {/* Hero Section with Curved Design */}
       <section className="relative overflow-hidden pt-20 pb-32 md:pt-32 md:pb-48 bg-white">
-        {/* Fênix no início - lado esquerdo */}
-        <div className="absolute top-32 left-8 opacity-50 pointer-events-none">
-          <svg width="200" height="200" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="60" r="18" fill="#c9a961" />
-            <circle cx="50" cy="32" r="11" fill="#c9a961" />
-            <circle cx="54" cy="30" r="2" fill="#0f1f2e" />
-            <path d="M38 55 Q25 48 20 62 Q28 58 38 62Z" fill="#c9a961" />
-            <path d="M62 55 Q75 48 80 62 Q72 58 62 62Z" fill="#c9a961" />
-            <path d="M48 75 Q45 85 42 95" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-            <path d="M50 76 Q50 88 50 98" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-            <path d="M52 75 Q55 85 58 95" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-          </svg>
-        </div>
+
 
         {/* Curved top decoration */}
         <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none">
@@ -65,19 +53,7 @@ export default function Home() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent z-1" />
 
-        {/* Fênix no final do hero - lado direito */}
-        <div className="absolute bottom-10 right-8 opacity-50 pointer-events-none">
-          <svg width="250" height="250" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="60" r="18" fill="#c9a961" />
-            <circle cx="50" cy="32" r="11" fill="#c9a961" />
-            <circle cx="54" cy="30" r="2" fill="#0f1f2e" />
-            <path d="M38 55 Q25 48 20 62 Q28 58 38 62Z" fill="#c9a961" />
-            <path d="M62 55 Q75 48 80 62 Q72 58 62 62Z" fill="#c9a961" />
-            <path d="M48 75 Q45 85 42 95" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-            <path d="M50 76 Q50 88 50 98" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-            <path d="M52 75 Q55 85 58 95" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-          </svg>
-        </div>
+
         
         <div className="container relative z-10">
           <div className="max-w-2xl">
@@ -205,19 +181,7 @@ export default function Home() {
 
       {/* Benéficios Section */}
       <section className="section-spacing bg-gradient-to-b from-white to-gray-50 relative">
-        {/* Fênix no centro */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-40 pointer-events-none">
-          <svg width="300" height="300" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="60" r="18" fill="#c9a961" />
-            <circle cx="50" cy="32" r="11" fill="#c9a961" />
-            <circle cx="54" cy="30" r="2" fill="#0f1f2e" />
-            <path d="M38 55 Q25 48 20 62 Q28 58 38 62Z" fill="#c9a961" />
-            <path d="M62 55 Q75 48 80 62 Q72 58 62 62Z" fill="#c9a961" />
-            <path d="M48 75 Q45 85 42 95" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-            <path d="M50 76 Q50 88 50 98" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-            <path d="M52 75 Q55 85 58 95" stroke="#c9a961" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-          </svg>
-        </div>
+
 
         <div className="container relative z-10">
           <div className="text-center mb-16">
