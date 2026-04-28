@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Shield, Zap, Users, BarChart3, FileText, Eye, Shuffle } from "lucide-react";
+import { ArrowRight, CheckCircle, Shield, Zap, Users, BarChart3, FileText, Eye, Shuffle, Settings } from "lucide-react";
 import { useLocation } from "wouter";
 
 /**
@@ -20,12 +20,16 @@ export default function Home() {
         <div className="container flex items-center justify-between h-20">
           <h1 className="font-playfair font-bold text-[#0f1f2e] text-xl">Marlene Marino</h1>
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#servicos" className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium">Serviços</a>
-            <a href="#beneficios" className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium">Benefícios</a>
-            <a href="#contato" className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium">Contato</a>
-            <Button className="bg-[#0f1f2e] text-white hover:bg-[#1a3a52] px-6 py-2 rounded-lg font-medium transition-all">Solicitar Informações</Button>
+            <button onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer">Serviços</button>
+            <button onClick={() => document.getElementById('beneficios')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer">Benéficios</button>
+            <button onClick={() => setLocation('/contato')} className="text-gray-600 hover:text-[#0f1f2e] transition-colors text-sm font-medium cursor-pointer">Contato</button>
+            <Button onClick={() => setLocation('/contato')} className="bg-[#0f1f2e] text-white hover:bg-[#1a3a52] px-6 py-2 rounded-lg font-medium transition-all">Solicitar Informações</Button>
           </nav>
-          <div className="w-20" />
+          <div className="flex items-center gap-4">
+            <div title="Configurações">
+              <Settings size={20} className="text-[#0f1f2e] cursor-pointer hover:text-[#c9a961] transition-colors" />
+            </div>
+          </div>
         </div>
       </header>
 
