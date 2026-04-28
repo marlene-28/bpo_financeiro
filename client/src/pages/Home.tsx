@@ -355,6 +355,97 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Depoimentos Section */}
+      <section className="section-spacing bg-white">
+        <div className="container">
+          <div className="text-center mb-16">
+            <div className="flex justify-center mb-4">
+              <div className="h-1 w-16 bg-gradient-to-r from-[#c9a961] to-[#0f1f2e]" />
+            </div>
+            <h2 className="font-playfair font-bold text-[#0f1f2e] text-4xl mb-4">Depoimentos de Clientes</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Veja o que nossos clientes dizem sobre nossos serviços
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-[#0f1f2e] to-[#1a3a52] rounded-lg p-8 text-white">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-[#c9a961] text-xl">★★★★★</span>
+              </div>
+              <p className="text-gray-200 mb-6 italic">"Marlene transformou completamente a organização das nossas finanças. Agora temos total clareza sobre nosso fluxo de caixa!"</p>
+              <p className="font-semibold text-[#c9a961]">João Silva</p>
+              <p className="text-gray-300 text-sm">Proprietário - Comércio</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-[#0f1f2e] to-[#1a3a52] rounded-lg p-8 text-white">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-[#c9a961] text-xl">★★★★★</span>
+              </div>
+              <p className="text-gray-200 mb-6 italic">"Profissional, atenta aos detalhes e muito responsável. Recomendo para qualquer empresa que precisa organizar suas finanças."</p>
+              <p className="font-semibold text-[#c9a961]">Maria Santos</p>
+              <p className="text-gray-300 text-sm">Gerente Financeira - Serviços</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-[#0f1f2e] to-[#1a3a52] rounded-lg p-8 text-white">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-[#c9a961] text-xl">★★★★★</span>
+              </div>
+              <p className="text-gray-200 mb-6 italic">"Excelente atendimento! Marlene entendeu perfeitamente nossas necessidades e implementou soluções práticas e eficientes."</p>
+              <p className="font-semibold text-[#c9a961]">Pedro Costa</p>
+              <p className="text-gray-300 text-sm">Empreendedor - Tecnologia</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="section-spacing bg-gray-50">
+        <div className="container">
+          <div className="text-center mb-16">
+            <div className="flex justify-center mb-4">
+              <div className="h-1 w-16 bg-gradient-to-r from-[#c9a961] to-[#0f1f2e]" />
+            </div>
+            <h2 className="font-playfair font-bold text-[#0f1f2e] text-4xl mb-4">Perguntas Frequentes</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Tire suas dúvidas sobre nossos serviços
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto space-y-6">
+            <div className="bg-white rounded-lg p-8 border border-gray-100 shadow-sm">
+              <h3 className="font-semibold text-[#0f1f2e] text-lg mb-3">Como funciona o processo de contratação?</h3>
+              <p className="text-gray-600">Você entra em contato comigo, descrevemos suas necessidades, e então estruturamos um plano personalizado de BPO Financeiro. Começamos com uma análise inicial e depois iniciamos os trabalhos.</p>
+            </div>
+
+            <div className="bg-white rounded-lg p-8 border border-gray-100 shadow-sm">
+              <h3 className="font-semibold text-[#0f1f2e] text-lg mb-3">Qual é o valor dos serviços?</h3>
+              <p className="text-gray-600">Os valores variam de acordo com o volume de operações, a complexidade dos processos e a frequência de atendimento. Faço uma proposta personalizada após análise das suas necessidades.</p>
+            </div>
+
+            <div className="bg-white rounded-lg p-8 border border-gray-100 shadow-sm">
+              <h3 className="font-semibold text-[#0f1f2e] text-lg mb-3">Vocês trabalham com que tipo de empresas?</h3>
+              <p className="text-gray-600">Trabalho com MEIs, micro e pequenas empresas, profissionais autônomos e empresas que já possuem contabilidade mas precisam de organização diária das rotinas financeiras.</p>
+            </div>
+
+            <div className="bg-white rounded-lg p-8 border border-gray-100 shadow-sm">
+              <h3 className="font-semibold text-[#0f1f2e] text-lg mb-3">Como é feita a comunicação e acompanhamento?</h3>
+              <p className="text-gray-600">Toda a comunicação é feita de forma remota via email, WhatsApp ou reuniões virtuais. Você recebe relatórios mensais com o status de todas as operações financeiras.</p>
+            </div>
+
+            <div className="bg-white rounded-lg p-8 border border-gray-100 shadow-sm">
+              <h3 className="font-semibold text-[#0f1f2e] text-lg mb-3">Posso contratar apenas alguns serviços?</h3>
+              <p className="text-gray-600">Sim! Você pode contratar os serviços de forma modular. Podemos começar com Contas a Pagar e depois adicionar outros serviços conforme sua necessidade.</p>
+            </div>
+
+            <div className="bg-white rounded-lg p-8 border border-gray-100 shadow-sm">
+              <h3 className="font-semibold text-[#0f1f2e] text-lg mb-3">Qual é o tempo de resposta para dúvidas?</h3>
+              <p className="text-gray-600">Respondo dúvidas em até 24 horas úteis. Para questões urgentes, você pode entrar em contato via WhatsApp e receber resposta mais rápida.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-[#0f1f2e] text-white py-12 relative">
 

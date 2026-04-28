@@ -9,8 +9,8 @@ import Servicos from "./pages/Servicos";
 import Contato from "./pages/Contato";
 import WhatsAppWidget from "./components/WhatsAppWidget";
 
-
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />
