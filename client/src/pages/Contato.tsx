@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Send, Phone, Mail, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "wouter";
+import { trpc } from "@/lib/trpc";
+import { toast } from "sonner";
 
 export default function Contato() {
   const [, setLocation] = useLocation();
@@ -22,22 +24,27 @@ export default function Contato() {
     }));
   };
 
+  const sendMessage = trpc.contact.sendMessage.useMutation();
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setCarregando(true);
 
     try {
-      // Simular envio de formulário
-      // Em produção, você conectaria a um backend ou serviço de email
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const result = await sendMessage.mutateAsync(formData);
       
-      console.log("Formulário enviado:", formData);
-      setEnviado(true);
-      setFormData({ nome: "", email: "", telefone: "", mensagem: "" });
-      
-      setTimeout(() => setEnviado(false), 3000);
+      if (result.success) {
+        setEnviado(true);
+        setFormData({ nome: "", email: "", telefone: "", mensagem: "" });
+        toast.success("Mensagem enviada com sucesso!");
+        
+        setTimeout(() => setEnviado(false), 3000);
+      } else {
+        toast.error(result.message || "Erro ao enviar mensagem");
+      }
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
+      toast.error("Erro ao enviar mensagem. Tente novamente mais tarde.");
     } finally {
       setCarregando(false);
     }
