@@ -131,9 +131,9 @@ export default function Home() {
               <p className="text-gray-600 mb-4">
                 Processamento completo de contas a pagar com controle, validação e pagamento de fornecedores.
               </p>
-              <div className="flex items-center text-[#c9a961] font-semibold hover:gap-2 transition-all cursor-pointer">
+              <button onClick={() => setLocation('/servicos')} className="flex items-center text-[#c9a961] font-semibold hover:gap-2 transition-all cursor-pointer bg-none border-none p-0">
                 Saiba mais <ArrowRight size={16} className="ml-2" />
-              </div>
+              </button>
             </div>
 
             {/* Service Card 2 */}
@@ -145,9 +145,9 @@ export default function Home() {
               <p className="text-gray-600 mb-4">
                 Gestão completa de contas a receber, cobrança e acompanhamento de pagamentos de clientes.
               </p>
-              <div className="flex items-center text-[#c9a961] font-semibold hover:gap-2 transition-all cursor-pointer">
+              <button onClick={() => setLocation('/servicos')} className="flex items-center text-[#c9a961] font-semibold hover:gap-2 transition-all cursor-pointer bg-none border-none p-0">
                 Saiba mais <ArrowRight size={16} className="ml-2" />
-              </div>
+              </button>
             </div>
 
             {/* Service Card 3 */}
@@ -159,9 +159,9 @@ export default function Home() {
               <p className="text-gray-600 mb-4">
                 Controle e acompanhamento do fluxo de caixa com projeções e análise de disponibilidade.
               </p>
-              <div className="flex items-center text-[#c9a961] font-semibold hover:gap-2 transition-all cursor-pointer">
+              <button onClick={() => setLocation('/servicos')} className="flex items-center text-[#c9a961] font-semibold hover:gap-2 transition-all cursor-pointer bg-none border-none p-0">
                 Saiba mais <ArrowRight size={16} className="ml-2" />
-              </div>
+              </button>
             </div>
 
             {/* Service Card 4 */}
@@ -173,9 +173,9 @@ export default function Home() {
               <p className="text-gray-600 mb-4">
                 Processamento e emissão de notas fiscais com conformidade fiscal e tributária.
               </p>
-              <div className="flex items-center text-[#c9a961] font-semibold hover:gap-2 transition-all cursor-pointer">
+              <button onClick={() => setLocation('/servicos')} className="flex items-center text-[#c9a961] font-semibold hover:gap-2 transition-all cursor-pointer bg-none border-none p-0">
                 Saiba mais <ArrowRight size={16} className="ml-2" />
-              </div>
+              </button>
             </div>
 
             {/* Service Card 5 */}
@@ -187,9 +187,9 @@ export default function Home() {
               <p className="text-gray-600 mb-4">
                 Reconciliação completa de extratos bancários com precisão e identificação de divergências.
               </p>
-              <div className="flex items-center text-[#c9a961] font-semibold hover:gap-2 transition-all cursor-pointer">
+              <button onClick={() => setLocation('/servicos')} className="flex items-center text-[#c9a961] font-semibold hover:gap-2 transition-all cursor-pointer bg-none border-none p-0">
                 Saiba mais <ArrowRight size={16} className="ml-2" />
-              </div>
+              </button>
             </div>
 
             {/* Service Card 6 */}
@@ -201,9 +201,9 @@ export default function Home() {
               <p className="text-gray-600 mb-4">
                 Elaboração de relatórios mensais com análise detalhada da situação financeira.
               </p>
-              <div className="flex items-center text-[#c9a961] font-semibold hover:gap-2 transition-all cursor-pointer">
+              <button onClick={() => setLocation('/servicos')} className="flex items-center text-[#c9a961] font-semibold hover:gap-2 transition-all cursor-pointer bg-none border-none p-0">
                 Saiba mais <ArrowRight size={16} className="ml-2" />
-              </div>
+              </button>
             </div>
           </div>
         </div>
@@ -474,7 +474,8 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4 text-[#c9a961]">Contato</h4>
               <p className="text-gray-300 text-sm mb-2">📞 +55 11 99999-9999</p>
-              <p className="text-gray-300 text-sm mb-2">📧 marlene.marino@outlook.com</p>
+              <p className="text-gray-300 text-sm mb-2">📧 marlene@bpofinanceiro.emp.br</p>
+              <p className="text-gray-300 text-sm mb-2">🌐 www.bpofinanceiro.emp.br</p>
               <p className="text-gray-300 text-sm">🔗 <a href="https://linkedin.com/in/marlene-marino28" target="_blank" rel="noopener noreferrer" className="hover:text-[#c9a961] transition-colors">LinkedIn</a></p>
             </div>
           </div>
