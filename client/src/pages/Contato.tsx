@@ -109,8 +109,8 @@ export default function Contato() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#0f1f2e] mb-1">Email</h4>
-                    <a href="mailto:marlene@bpofinanceiro.emp.br" className="text-gray-600 hover:text-[#c9a961] transition-colors">
-                      marlene@bpofinanceiro.emp.br
+                    <a href="mailto:contato@bpofinanceiro.emp.br" className="text-gray-600 hover:text-[#c9a961] transition-colors">
+                      contato@bpofinanceiro.emp.br
                     </a>
                   </div>
                 </div>
