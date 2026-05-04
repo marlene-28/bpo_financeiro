@@ -29,7 +29,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          # Alterado de dist para public para bater com suas pastas
+          path: public
   deploy:
     needs: build
     runs-on: ubuntu-latest
