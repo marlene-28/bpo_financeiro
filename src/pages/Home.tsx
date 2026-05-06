@@ -75,7 +75,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 z-0 opacity-50"
           style={{
-            backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663605499308/EyquiZpZ5Nxf6C7LngVP3e/bpo-hero-background-n8SYbsRTjyk8pJr8vCGcPM.webp)',
+            backgroundImage: 'url(/src/assets/hero-bg.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
